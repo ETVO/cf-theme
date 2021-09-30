@@ -1,0 +1,52 @@
+// Import partials
+@import "partials/header.scss";
+@import "partials/footer.scss";
+@import "partials/bottom.scss";
+@import "partials/searchform.scss";
+@import "partials/feed.scss";
+@import "partials/blog.scss";
+@import "partials/categories.scss";
+@import "partials/pagination.scss";
+@import "partials/404.scss";
+@import "partials/content-post.scss";
+
+// Import partials
+@import "shortcodes/nossos_empre.scss";
+@import "shortcodes/blog_feed.scss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+body {
+    overflow-y: scroll !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f2f2f4;
+    background: #E4E7F0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #777E8E;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5C6373;
+}
