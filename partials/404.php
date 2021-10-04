@@ -18,7 +18,7 @@ $message = 'Nenhuma página foi encontrada';
                 <?php echo $code; ?>
             </h1>
         </div>
-        <div class="message pt-2 pb-4">
+        <div class="message pb-4">
             <?php echo $message; ?>
         </div>
         <div class="search">

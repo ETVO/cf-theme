@@ -108,7 +108,7 @@ foreach($meta as $property) {
         <div class="content">
             <?php the_content(); ?>
         </div>
-        <div class="after-content pt-3 blog_feed no-bg item-border">
+        <div class="after-content pt-3 blog_feed no_bg item-border">
             <h5>Posts relacionados</h5>
         <?php
 

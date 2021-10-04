@@ -1,0 +1,41 @@
+.form_multiple {
+    .nav {
+        .nav-item {
+            button {
+                display: block;
+                width: 100%;
+                padding: 10px 20px;
+                border: none;
+                color: #4C516F;
+                background-color: transparent;
+                text-align: left;
+
+                &.active {
+                    color: #10109E;
+                    background-color: #E4E6EC;
+                    font-weight: bold;
+                }
+            }
+
+        }
+    }
+
+    .departamentos-options {
+        padding-right: 50px;
+    }
+
+    .form-inner {
+        padding-top: 0;
+        padding: 0;
+
+        .title {
+            h1, h2, h3, h4 {
+                text-transform: lowercase;
+            }
+        }
+
+        .form {
+            padding: 0 0;
+        }
+    }
+}

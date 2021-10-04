@@ -174,6 +174,24 @@ class CF_Customizer {
             'label'    => esc_html__('Endereço'),
             'section'  => $section
         ] );
+
+        /**
+         *  Address to be Shown
+         */
+        $wp_customize->add_setting(
+            'cf_show_address',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'cf_show_address', [
+            'type'     => 'textarea',
+            'settings' => 'cf_show_address',
+            'label'    => esc_html__('Endereço a ser exibido'),
+            'description' => __('Pode conter símbolos e quebra de linha.'),
+            'section'  => $section
+        ] );
         
         /**
         * Social Icons

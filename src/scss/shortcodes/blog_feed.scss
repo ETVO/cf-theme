@@ -3,6 +3,10 @@
     background-color: #051133B3;
     background: linear-gradient(rgba(#051133, .6) 0%, #051133 100%);
 
+    &.no_bg {
+        background: none;
+    }
+
     position: relative;
 
     .underlay {

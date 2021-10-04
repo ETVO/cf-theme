@@ -13,8 +13,10 @@
 // Import partials
 @import "shortcodes/nossos_empre.scss";
 @import "shortcodes/blog_feed.scss";
-@import "shortcodes/form_simple.scss";
 @import "shortcodes/default_submit.scss";
+@import "shortcodes/form_simple.scss";
+@import "shortcodes/form_multiple.scss";
+@import "shortcodes/address_map.scss";
 
 // Import components
 @import "components/form.scss";

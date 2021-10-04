@@ -2,13 +2,15 @@
 
 function form_simple($attrs) {
     $attrs = shortcode_atts( array(
-        'show_title' => 1
+        'show_title' => 1,
+        'title' => 'Ficou com alguma dúvida?',
+        'subtitle' => 'entre em contato conosco!',
     ), $attrs );
 
     $shortcode = get_theme_mod('cf_form'); 
 
-    $title = 'Ficou com alguma dúvida?';
-    $subtitle = 'entre em contato conosco!';
+    $title = $attrs['title'];
+    $subtitle = $attrs['subtitle'];
     $bg_image_url = get_theme_mod('cf_form_image');
 
     ob_start(); // Start HTML buffering

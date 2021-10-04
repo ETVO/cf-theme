@@ -4,9 +4,18 @@
             color: #777E8E;
         }
         > .image {
+            display: flex;
             img {
                 border-radius: 5px;
+                margin: auto;
             }
+        }
+    }
+
+    .after-content {
+        h4, h5, h6 {
+            font-weight: 600;
+            color: #10109E;
         }
     }
 }
