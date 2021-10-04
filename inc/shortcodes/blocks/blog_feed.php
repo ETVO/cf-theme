@@ -27,7 +27,7 @@ function blog_feed($attrs) {
     );
 
     $blog_link = get_permalink(get_option('page_for_posts'));
-    $bg_image_url = get_theme_mod('cf_form_image');
+    $bg_image_url = get_theme_mod('cf_blog_feed_image');
 
     // The Query
     $query = new WP_Query($args);

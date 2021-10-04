@@ -39,7 +39,9 @@ class CF_Shortcodes {
         
         $codes = array(
             'nossos_empre',
-            'blog_feed'
+            'blog_feed',
+            'form_simple',
+            'default_submit',
         );
 
         // Add shortcodes

@@ -393,7 +393,38 @@ class CF_Customizer {
         Kirki::add_field( 'cf_form_image', [
             'type'     => 'image',
             'settings' => 'cf_form_image',
-            'label'    => esc_html__('Imagem de fundo do Formulário'),
+            'label'    => esc_html__('Fundo do Formulário'),
+            'section'  => $section
+        ] );
+
+       
+        Kirki::add_field( 
+            'title_blog',
+            array(
+                'type'      => 'custom',
+                'settings'  => 'title_blog',
+                'section'   => $section,
+                'default'   => '<h3 class="customize-section-title">' 
+                    . __('Blog') 
+                    . '</h3>'
+            )
+        );
+
+
+        /**
+         *  Form Image
+         */
+        $wp_customize->add_setting(
+            'cf_blog_feed_image',
+            array(
+                'default' => ''
+            )
+        );
+
+        Kirki::add_field( 'cf_blog_feed_image', [
+            'type'     => 'image',
+            'settings' => 'cf_blog_feed_image',
+            'label'    => esc_html__('Fundo dos bloco de posts recentes'),
             'section'  => $section
         ] );
         

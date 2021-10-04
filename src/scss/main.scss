@@ -13,6 +13,11 @@
 // Import partials
 @import "shortcodes/nossos_empre.scss";
 @import "shortcodes/blog_feed.scss";
+@import "shortcodes/form_simple.scss";
+@import "shortcodes/default_submit.scss";
+
+// Import components
+@import "components/form.scss";
 
 html {
     scroll-behavior: smooth;
