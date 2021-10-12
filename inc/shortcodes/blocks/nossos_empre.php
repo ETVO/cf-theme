@@ -5,7 +5,7 @@ function nossos_empre($attrs) {
         'max' => 2,
     ), $attrs );
     
-    $post_type = 'empre';
+    $post_type = 'empreendimento';
     $orderby = 'title';
     $order = 'ASC';
     $no_found_posts = true;
