@@ -49,6 +49,18 @@ $icons = get_theme_mod('cf_social_icons');
 
 ?>
 
+<div class="cookies-consent" id="cookiePopup">
+    <div class="text">
+        <p>
+        <b><span class="bi bi-lightbulb"></span> Este site usa cookies.</b> <br>
+        Ao utilizar os nossos serviços, você concorda com tal monitoramento.
+        </p>
+    </div>
+    <div class="action">
+        <button class="btn" id="cookieAccept">aceitar</button>
+    </div>
+</div>
+
 <footer>
     <div class="content col-11 col-sm-8 col-md-9 col-lg-7 col-xl-7 px-2 py-4 m-auto">
         <div class="row">

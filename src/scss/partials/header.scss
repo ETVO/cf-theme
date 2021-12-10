@@ -32,12 +32,12 @@ header {
 
             &:hover, &:active, &:focus {
                 color: $header-fg-hover;
-            }
+                }
 
-            span {
-                transition: border-bottom-color 0.1s ease;
-                border-bottom: solid 1px transparent;
-            }
+                span {
+                    transition: border-bottom-color 0.1s ease;
+                    border-bottom: solid 1px transparent;
+                }
         }
 
         .dropdown-menu {
