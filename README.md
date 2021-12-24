@@ -1,4 +1,4 @@
-# GDI Theme
+# CF Theme
 
 WordPress theme exclusively developed for the **CF Negócios Imobiliários** website that can be accessed [here](https://cfnegocios.com.br/).
 
