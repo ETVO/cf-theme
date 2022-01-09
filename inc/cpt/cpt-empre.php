@@ -118,7 +118,7 @@ class CPT_Empre {
         $args = array(
             'label'                 => __('Empreendimentos'),
             'labels'                => $labels,
-            'description'           => __('Empreendimentos da GDI'),
+            'description'           => __('Empreendimentos'),
             'public'                => true,
             'show_in_rest'          => true,
             'hierarchical'          => false,
