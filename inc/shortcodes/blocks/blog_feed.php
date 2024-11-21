@@ -1,12 +1,12 @@
 <?php
 
-function blog_feed($attrs) {
-    $attrs = shortcode_atts( array(
-    ), $attrs );
+function blog_feed($attrs)
+{
+    $attrs = shortcode_atts(array(), $attrs);
 
     $title = 'Blog e notícias';
 
-    
+
 
     $ppp = 4;
     $no_found_posts = true;
@@ -20,10 +20,10 @@ function blog_feed($attrs) {
         'has_password'      => false,
         'posts_per_page'    => $ppp,
         'no_found_posts'    => $no_found_posts,
-        
-        
+
+
         // Order ASC first by 'menu_order', only after by 'title' or 'date'
-        'orderby'                => array( 'menu_order' => 'ASC' , $orderby => $order ), 
+        'orderby'                => array('menu_order' => 'ASC', $orderby => $order),
     );
 
     $blog_link = get_permalink(get_option('page_for_posts'));
@@ -34,8 +34,8 @@ function blog_feed($attrs) {
 
     ob_start(); // Start HTML buffering
 
-    if($query->have_posts()) {
-        ?>
+    if ($query->have_posts()) {
+?>
 
         <section class="blog_feed py-4">
             <div class="underlay">
@@ -47,41 +47,42 @@ function blog_feed($attrs) {
                         <?php echo $title; ?>
                     </h2>
                 </div>
-                
+
                 <div class="items row g-3 py-4 justify-content-center">
-                <?php
+                    <?php
                     $i = 0;
                     while ($query->have_posts()) :
                         $i++;
                         $hide_class = '';
-                        if($i == 4) $hide_class = 'd-none d-xl-block';
+                        if ($i == 4) $hide_class = 'd-none d-xl-block';
                         $query->the_post();
-                        
+
                         $post = get_post();
-                        
+
                         $permalink = esc_url(get_the_permalink());
-                        
+
                         $image_url = get_the_post_thumbnail_url($post->ID, 'thumbnail');
                         $image_alt = get_the_post_thumbnail_caption();
-                        
+
                         $post_title = get_the_title();
                         $excerpt = get_the_excerpt();
                         $date = get_the_date();
 
                         // Get the first tag name
-                        $tag = get_the_tags()[0];
+                        $tags = get_the_tags();
+                        $tag = $tags ? $tags[0] : null;
 
-                        ?>
+                    ?>
                         <div class="item col-12 col-sm-6 col-lg-4 col-xl-3 <?php echo $hide_class; ?>">
                             <div class="item-inner">
                                 <div class="image clink" href="<?php echo $permalink; ?>">
                                     <img class="w-100" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
-                                    <?php if($tag->name): ?>
-                                    <div class="tag-overlay">
-                                        <span>
-                                            <?php echo $tag->name; ?>
-                                        </span>
-                                    </div>
+                                    <?php if ($tag && $tag->name): ?>
+                                        <div class="tag-overlay">
+                                            <span>
+                                                <?php echo $tag->name; ?>
+                                            </span>
+                                        </div>
                                     <?php endif; ?>
                                 </div>
                                 <div class="info text-start">
@@ -111,10 +112,10 @@ function blog_feed($attrs) {
                                 </div>
                             </div>
                         </div>
-                        <?php
-                    
+                    <?php
+
                     endwhile;
-                ?>
+                    ?>
                 </div>
 
                 <div class="action-wrap mt-4">
@@ -126,8 +127,8 @@ function blog_feed($attrs) {
                 </div>
             </div>
         </section>
-        
-        <?php
+
+<?php
     }
 
     $output = ob_get_contents(); // collect buffered contents

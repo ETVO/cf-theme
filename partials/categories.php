@@ -8,6 +8,7 @@
 
 $categories = get_categories();
 
+$set_category_slug = null;
 if(isset($_GET['category'])) {
     $set_category_slug = $_GET['category'];
 }
